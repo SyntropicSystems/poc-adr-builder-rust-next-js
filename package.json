@@ -2,23 +2,30 @@
   "name": "adr-editor-poc",
   "version": "0.1.0",
   "private": true,
-  "description": "ADR Editor PoC - Validating hexagonal architecture with Rust + Next.js + gRPC",
+  "description": "ADR Editor PoC - Rust (primary) + Next.js (frontend) + Python (utilities)",
   "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=24.0.0",
-    "pnpm": ">=9.0.0"
+    "pnpm": ">=9.0.0",
+    "python": ">=3.14"
   },
   "workspaces": [
     "apps/*"
   ],
   "scripts": {
-    "dev": "pnpm --filter adr-web dev",
-    "build": "pnpm --filter adr-web build",
-    "test": "pnpm --filter adr-web test",
-    "lint": "pnpm --filter adr-web lint",
-    "proto:gen": "scripts/generate-api-docs.sh",
-    "docs:validate": "scripts/validate-docs.sh",
-    "docs:generate-api": "scripts/generate-api-docs.sh"
+    "// Note: Cargo is primary tool - see README": "",
+    "// Frontend-only scripts (pnpm)": "",
+    "web:dev": "pnpm --filter adr-web dev",
+    "web:build": "pnpm --filter adr-web build",
+    "web:test": "pnpm --filter adr-web test",
+    "web:lint": "pnpm --filter adr-web lint",
+    "// Utility scripts (Python 3.14)": "",
+    "docs:validate": "python3 scripts/validate_docs.py",
+    "docs:generate": "python3 scripts/generate_api_docs.py",
+    "// Project-wide validation": "",
+    "test": "cargo test && pnpm web:test",
+    "validate": "cargo check && pnpm web:lint && python3 scripts/validate_docs.py",
+    "check": "cargo check"
   },
   "devDependencies": {},
   "repository": {

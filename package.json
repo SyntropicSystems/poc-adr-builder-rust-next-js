@@ -1,0 +1,28 @@
+{
+  "name": "adr-editor-poc",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ADR Editor PoC - Validating hexagonal architecture with Rust + Next.js + gRPC",
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=24.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "pnpm --filter adr-web dev",
+    "build": "pnpm --filter adr-web build",
+    "test": "pnpm --filter adr-web test",
+    "lint": "pnpm --filter adr-web lint",
+    "proto:gen": "scripts/generate-api-docs.sh",
+    "docs:validate": "scripts/validate-docs.sh",
+    "docs:generate-api": "scripts/generate-api-docs.sh"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:SyntropicSystems/poc-event-sourced-task-management-rust-service.git"
+  }
+}

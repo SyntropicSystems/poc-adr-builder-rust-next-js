@@ -19,10 +19,6 @@ Architecture Decision Records (ADRs) document significant architectural decision
 
 | # | Title | Status | Date |
 |---|-------|--------|------|
-| [0001](./0001-use-hexagonal-architecture.md) | Use Hexagonal Architecture | ✅ Accepted | 2025-10-20 |
-| [0002](./0002-use-grpc-for-api.md) | Use gRPC for API | ✅ Accepted | 2025-10-20 |
-| [0003](./0003-cargo-workspace-structure.md) | Cargo Workspace Structure | ✅ Accepted | 2025-10-20 |
-| [0004](./0004-repository-pattern.md) | Repository Pattern for Storage | ✅ Accepted | 2025-10-20 |
 
 ---
 
@@ -128,10 +124,6 @@ Future considerations:
 ---
 
 ## 📖 Related Documentation
-
-- **Architecture Overview**: [../architecture/OVERVIEW.md](../architecture/OVERVIEW.md)
-- **Technology Stack**: [../architecture/TECHNOLOGY_STACK.md](../architecture/TECHNOLOGY_STACK.md)
-- **For Detailed Analysis**: [../../.meta/task-service/design-docs/DECISIONS.md](../../.meta/task-service/design-docs/DECISIONS.md)
 
 ---
 

@@ -9,8 +9,7 @@
 This system uses **gRPC** with **Protocol Buffers** for the API.
 
 **Key Documents**:
-- [gRPC Details](./GRPC.md) - Generated API reference
-- [ADR 0002](../adr/0002-use-grpc-for-api.md) - Why gRPC
+- [gRPC Details](./GRPC.md) - Generated API reference # TBD
 
 ---
 
@@ -29,36 +28,6 @@ This system uses **gRPC** with **Protocol Buffers** for the API.
 ---
 
 ## 🔧 Testing the API
-
-### Using grpcurl
-
-```bash
-# List services
-grpcurl -plaintext localhost:50051 list
-
-# List ADRs
-grpcurl -plaintext localhost:50051 adr.v1.ADRService/ListADRs
-
-# Create ADR
-grpcurl -plaintext -d '{"title":"Test ADR","description":"Testing"}' \
-  localhost:50051 adr.v1.ADRService/CreateADR
-```
-
-### Using TypeScript Client
-
-```typescript
-import { ADRServiceClient } from './generated/adr_pb_service';
-
-const client = new ADRServiceClient('http://localhost:50051');
-
-// Create ADR
-const response = await client.createADR({
-  title: 'My ADR',
-  description: 'Description here'
-});
-```
-
----
 
 ## 📝 Schema
 

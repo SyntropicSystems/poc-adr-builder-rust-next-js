@@ -1,0 +1,1 @@
+Project management for the core platform the adr-editor is built on top. See platform-framework-exploration folder.

@@ -2,7 +2,7 @@
 
 **Last Updated**: 2025-10-24
 **Status**: Active Exploration
-**Documents**: 10 core documents + supporting materials
+**Documents**: 6 core documents
 
 ---
 
@@ -28,23 +28,7 @@
             ┌──────────────┐   ┌──────────────┐
             │  Technology  │   │  Extraction  │
             │ Integration  │   │    Rules     │
-            └──────┬───────┘   └──────┬───────┘
-                   │                  │
-                   └────────┬─────────┘
-                            │
-                            ↓
-                ┌───────────────────────┐
-                │  Implementation       │
-                │  Roadmap              │
-                └───────────────────────┘
-                            │
-            ┌───────────────┼───────────────┐
-            │               │               │
-            ↓               ↓               ↓
-    ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
-    │  Decision   │ │   Success   │ │  Reference  │
-    │  Framework  │ │   Metrics   │ │  Projects   │
-    └─────────────┘ └─────────────┘ └─────────────┘
+            └──────────────┘   └──────────────┘
 ```
 
 ---
@@ -67,6 +51,8 @@
 **Related Documents**:
 - → [02-foundational-infrastructure.md](./02-foundational-infrastructure.md) - What to build now
 - → [03-emergent-capabilities.md](./03-emergent-capabilities.md) - What to build later
+- → [04-repository-strategy.md](./04-repository-strategy.md) - How to organize repos
+- → [05-technology-integration.md](./05-technology-integration.md) - How technologies work together
 - → [06-extraction-rules.md](./06-extraction-rules.md) - When to extract
 
 ---
@@ -89,8 +75,9 @@
 
 **Related Documents**:
 - ← [01-strategic-context.md](./01-strategic-context.md) - Why these are foundational
+- → [04-repository-strategy.md](./04-repository-strategy.md) - Where foundational code lives
 - → [05-technology-integration.md](./05-technology-integration.md) - How they work together
-- → [07-implementation-roadmap.md](./07-implementation-roadmap.md) - How to build them
+- → [06-extraction-rules.md](./06-extraction-rules.md) - Extract immediately (foundational exception)
 
 ---
 
@@ -110,8 +97,8 @@
 
 **Related Documents**:
 - ← [01-strategic-context.md](./01-strategic-context.md) - Rule of two/three philosophy
+- → [04-repository-strategy.md](./04-repository-strategy.md) - Where emergent capabilities go (capabilities/)
 - → [06-extraction-rules.md](./06-extraction-rules.md) - When to extract these
-- → [08-decision-framework.md](./08-decision-framework.md) - How to decide
 
 ---
 
@@ -133,9 +120,11 @@
 - Repo tool optional (use when needed)
 
 **Related Documents**:
+- ← [01-strategic-context.md](./01-strategic-context.md) - Strategic context for repository choices
 - ← [02-foundational-infrastructure.md](./02-foundational-infrastructure.md) - What goes in shared/
 - ← [03-emergent-capabilities.md](./03-emergent-capabilities.md) - What goes in capabilities/
-- → [06-extraction-rules.md](./06-extraction-rules.md) - How to extract
+- → [05-technology-integration.md](./05-technology-integration.md) - How technologies integrate across repos
+- → [06-extraction-rules.md](./06-extraction-rules.md) - When and how to extract
 
 ---
 
@@ -155,8 +144,10 @@
 **Key Insight**: Not "two-language problem", but "two-language solution"
 
 **Related Documents**:
-- ← [02-foundational-infrastructure.md](./02-foundational-infrastructure.md) - Foundation for all languages
-- → [ADR Platform doc](../../../docs/architecture/brief.md) - Full architecture
+- ← [01-strategic-context.md](./01-strategic-context.md) - Two-language solution philosophy
+- ← [02-foundational-infrastructure.md](./02-foundational-infrastructure.md) - Foundation that spans all languages
+- → [04-repository-strategy.md](./04-repository-strategy.md) - How repos handle multiple languages
+- → [06-extraction-rules.md](./06-extraction-rules.md) - Extraction rules apply across languages
 
 ---
 
@@ -178,96 +169,11 @@
 - Never extract: Project-specific, rapidly changing, UI components
 
 **Related Documents**:
-- ← [01-strategic-context.md](./01-strategic-context.md) - Philosophy behind rules
-- ← [02-foundational-infrastructure.md](./02-foundational-infrastructure.md) - What's foundational
-- ← [03-emergent-capabilities.md](./03-emergent-capabilities.md) - What's emergent
-- → [08-decision-framework.md](./08-decision-framework.md) - How to apply rules
-
----
-
-### 7. Implementation Roadmap
-**File**: [07-implementation-roadmap.md](./07-implementation-roadmap.md)
-**Status**: EXPLORING
-**Purpose**: Concrete steps for the next 90 days
-
-**Key Topics**:
-- Week 1-2: Build foundational infrastructure
-- Week 3-4: Set up two projects
-- Month 2-3: Build features, tag duplication
-- Month 4+: Extract capabilities as they emerge
-- Success metrics per phase
-
-**Timeline**:
-- Month 1: Foundation complete, projects starting
-- Month 2-3: Projects shipping features
-- Month 4: First capability extractions
-- Month 6: Framework emerges
-
-**Related Documents**:
-- ← [02-foundational-infrastructure.md](./02-foundational-infrastructure.md) - What to build in weeks 1-2
-- ← [06-extraction-rules.md](./06-extraction-rules.md) - When to extract in month 4+
-- → [09-success-metrics.md](./09-success-metrics.md) - How to measure progress
-
----
-
-## 🎯 Supporting Documents
-
-### 8. Decision Framework
-**File**: [08-decision-framework.md](./08-decision-framework.md)
-**Status**: EXPLORING
-**Purpose**: Tools and frameworks for making extraction decisions
-
-**Key Topics**:
-- 5-question test (reusability, domain, change drivers, testing, ownership)
-- Decision tree (is it foundational? is it domain-specific?)
-- Examples of each category
-- When to break the rules
-- Exception handling
-
-**Use this when**: Unsure if code should be shared or stay in project
-
-**Related Documents**:
-- ← [06-extraction-rules.md](./06-extraction-rules.md) - The rules to apply
-- → [10-reference-projects.md](./10-reference-projects.md) - Real examples
-
----
-
-### 9. Success Metrics
-**File**: [09-success-metrics.md](./09-success-metrics.md)
-**Status**: EXPLORING
-**Purpose**: How to measure if the strategy is working
-
-**Key Topics**:
-- Foundational infrastructure metrics (time to start project, reuse, breaking changes)
-- Emergent capability metrics (extraction timing, premature extractions)
-- Developer experience metrics (onboarding, setup, autonomy)
-- Triggers to revisit decisions
-- Evidence-based indicators
-
-**Use this for**: Tracking progress and detecting problems early
-
-**Related Documents**:
-- ← [07-implementation-roadmap.md](./07-implementation-roadmap.md) - When to measure
-- ← [06-extraction-rules.md](./06-extraction-rules.md) - Rules to validate
-
----
-
-### 10. Reference Projects
-**File**: [10-reference-projects.md](./10-reference-projects.md)
-**Status**: EXPLORING
-**Purpose**: Real-world examples and patterns to learn from
-
-**Key Topics**:
-- ADR PoC (current) - Reference implementation
-- FlowOS pattern - Contracts → Engines → Apps
-- Multi-Repo Strategy - Google Repo approach
-- ADR Platform Architecture - Rust + Python + TS integration
-- CLI Tools Architecture - Command patterns
-
-**Use this for**: Concrete examples and proven patterns
-
-**Related Documents**:
-- → All core documents reference these examples
+- ← [01-strategic-context.md](./01-strategic-context.md) - Rule of two/three philosophy
+- ← [02-foundational-infrastructure.md](./02-foundational-infrastructure.md) - What's foundational (extract immediately)
+- ← [03-emergent-capabilities.md](./03-emergent-capabilities.md) - What's emergent (rule of two/three)
+- ← [04-repository-strategy.md](./04-repository-strategy.md) - Where extracted code goes
+- ← [05-technology-integration.md](./05-technology-integration.md) - Technology-specific extraction
 
 ---
 
@@ -284,10 +190,7 @@
 | Know what to build later | [03-emergent-capabilities.md](./03-emergent-capabilities.md) |
 | Understand the repo structure | [04-repository-strategy.md](./04-repository-strategy.md) |
 | Understand how languages work together | [05-technology-integration.md](./05-technology-integration.md) |
-| Decide if code should be extracted | [06-extraction-rules.md](./06-extraction-rules.md) + [08-decision-framework.md](./08-decision-framework.md) |
-| Know what to do next | [07-implementation-roadmap.md](./07-implementation-roadmap.md) |
-| Check if we're on track | [09-success-metrics.md](./09-success-metrics.md) |
-| See real examples | [10-reference-projects.md](./10-reference-projects.md) |
+| Decide if code should be extracted | [06-extraction-rules.md](./06-extraction-rules.md) |
 
 ### By Topic
 
@@ -297,16 +200,13 @@
 | **What to Build** | [02-foundational-infrastructure.md](./02-foundational-infrastructure.md), [03-emergent-capabilities.md](./03-emergent-capabilities.md) |
 | **How to Organize** | [04-repository-strategy.md](./04-repository-strategy.md) |
 | **Technology Choices** | [05-technology-integration.md](./05-technology-integration.md) |
-| **Decision Making** | [06-extraction-rules.md](./06-extraction-rules.md), [08-decision-framework.md](./08-decision-framework.md) |
-| **Execution** | [07-implementation-roadmap.md](./07-implementation-roadmap.md) |
-| **Measurement** | [09-success-metrics.md](./09-success-metrics.md) |
-| **Examples** | [10-reference-projects.md](./10-reference-projects.md) |
+| **Extraction Rules** | [06-extraction-rules.md](./06-extraction-rules.md) |
 
 ### By Exploration Status
 
 | Status | Documents |
 |--------|-----------|
-| **EXPLORING** | All documents currently (2025-10-24) |
+| **EXPLORING** | All 6 documents (2025-10-24) |
 | **MATURING** | None yet |
 | **STABLE** | None yet |
 | **EVOLVED** | None yet |
@@ -337,30 +237,13 @@ Technology Integration (05)
 Foundation + Emergent
 ```
 
-### Decision Layer
+### Extraction Layer
 ```
 Extraction Rules (06)
-    ↓
-Decision Framework (08)
-    ↓
-Success Metrics (09)
-```
-
-### Execution Layer
-```
-Implementation Roadmap (07)
     ↑
     │ (informed by)
     │
-All Core Documents
-```
-
-### Reference Layer
-```
-Reference Projects (10)
-    ↓ (examples for)
-    │
-All Documents
+All Documents (01-05)
 ```
 
 ---
@@ -378,7 +261,7 @@ All Documents
 
 | Status | Count | Documents |
 |--------|-------|-----------|
-| EXPLORING | 10 | All core documents |
+| EXPLORING | 6 | All core documents (01-06) |
 | MATURING | 0 | None yet |
 | STABLE | 0 | None yet |
 | EVOLVED | 0 | None yet |
@@ -387,11 +270,11 @@ All Documents
 
 | Criteria | Status | Notes |
 |----------|--------|-------|
-| Core strategy clear | 🟡 In progress | Being documented |
+| Core strategy clear | ✅ Yes | Documented in 6 core documents |
 | Foundational vs emergent defined | ✅ Yes | Clear distinction |
 | Extraction rules concrete | ✅ Yes | Rule of two/three |
 | Technology integration documented | ✅ Yes | Rust/Python/TS patterns |
-| Implementation roadmap clear | 🟡 In progress | Timeline exists |
+| Repository strategy clear | ✅ Yes | Hybrid multi-repo approach |
 | Team alignment | ⏳ Pending | Needs review |
 
 ---
@@ -399,7 +282,7 @@ All Documents
 ## 🎯 Next Actions
 
 ### Immediate (This Week)
-1. Complete all 10 core documents
+1. ✅ Complete core 6 documents (01-06)
 2. Review and refine cross-references
 3. Validate examples and patterns
 4. Update statuses as documents stabilize
@@ -428,7 +311,7 @@ All Documents
 **Content Questions**:
 - Check "Open Questions" sections in documents
 - Look at "Related Concepts" for connections
-- Review [10-reference-projects.md](./10-reference-projects.md) for examples
+- Follow cross-references between documents
 
 **Process Questions**:
 - See [README.md](./README.md) "How to Use This Folder"

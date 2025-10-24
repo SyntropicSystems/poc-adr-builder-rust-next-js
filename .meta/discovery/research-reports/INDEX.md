@@ -2,7 +2,7 @@
 
 **Last Updated**: 2025-10-24
 **Status**: Active Collection
-**Reports**: 2 comprehensive analyses
+**Reports**: 4 comprehensive analyses
 
 ---
 
@@ -35,6 +35,92 @@
 ---
 
 ## 📖 Research Reports Catalog
+
+### 3. Architectural Blueprints for the Modern Platform
+**File**: [03-architectural-blueprints-orchestration-application-ai-platforms.md](./03-architectural-blueprints-orchestration-application-ai-platforms.md)
+**Source**: Google Gemini 2.5 Pro Deep Research
+**Date**: 2025-10-24
+**Length**: Comprehensive analysis with 3 Parts covering 9 Chapters
+
+**Focus Areas**:
+- Workflow and Pipeline Orchestration (Prefect, Google Workflows, n8n)
+- Application and Backend Platforms (Vercel, Firebase)
+- Unified MLOps and AI Platform (Google Vertex AI)
+- Developer Experience Lifecycle (across all platforms)
+- Integration Ecosystems and Extensibility
+
+**Key Platforms Analyzed**:
+- **Prefect** - Python-native orchestration with hybrid execution
+- **Google Workflows** - Declarative serverless state machine
+- **n8n** - Visual node-based automation with code flexibility
+- **Vercel** - Frontend Cloud with edge-first architecture
+- **Firebase** - Integrated Backend-as-a-Service suite
+- **Google Vertex AI** - End-to-end MLOps platform
+
+**Key Insights**:
+- Control plane vs data plane architectural separation
+- Developer abstraction spectrum (code-native, declarative, visual)
+- State management strategies (application-level vs managed service)
+- Composable ecosystems vs integrated suites
+- Evolution from data pipelines to reasoning pipelines
+
+**Relevance to Our Platform**:
+- ⭐⭐⭐⭐⭐ Highly relevant - deep architectural patterns
+- Orchestration patterns inform workflow engine design
+- Application platform patterns guide frontend integration
+- Integration strategies applicable to our ecosystem approach
+- State management insights critical for reliability
+
+**Related Exploration Documents**:
+- [Emergent Capabilities](../../platform-framework-exploration/03-emergent-capabilities.md) - Workflow Engine patterns
+- [Technology Integration](../../platform-framework-exploration/05-technology-integration.md) - Integration approaches
+
+---
+
+### 4. Open-Source Platform Patterns
+**File**: [04-open-source-platform-patterns-prefect-firebase-vercel.md](./04-open-source-platform-patterns-prefect-firebase-vercel.md)
+**Source**: ChatGPT 5 Pro Deep Research
+**Date**: 2025-10-24
+**Length**: Practical pattern analysis across 6 platforms
+
+**Focus Areas**:
+- Data Pipeline Orchestration (Prefect)
+- Backend-as-a-Service Platform (Firebase)
+- Web Deployment Platform (Vercel)
+- Unified ML/AI Platform (Vertex AI)
+- Serverless Orchestration Service (Google Workflows)
+- Open-Source Workflow Automation (n8n)
+
+**Key Platforms Analyzed**:
+- **Prefect** - Python-first workflow with dynamic DAGs
+- **Firebase** - Rapid development with managed services
+- **Vercel** - Global edge deployment with serverless
+- **Google Vertex AI** - Unified MLOps with managed infrastructure
+- **Google Workflows** - Declarative workflows for reliability
+- **n8n** - Visual automation with code escape hatches
+
+**Key Insights**:
+- Python-first orchestration reduces developer friction
+- Managed services accelerate time-to-market
+- Edge-first architecture for global performance
+- Serverless scaling patterns for efficiency
+- Developer experience as competitive advantage
+- Open-source extensibility enables customization
+
+**Relevance to Our Platform**:
+- ⭐⭐⭐⭐⭐ Highly relevant - practical DX patterns
+- Prefect patterns directly applicable to workflow design
+- Firebase SDK approach informs client library design
+- Vercel CI/CD patterns guide deployment strategy
+- Developer experience lessons for platform adoption
+
+**Related Exploration Documents**:
+- [Foundational Infrastructure](../../platform-framework-exploration/02-foundational-infrastructure.md) - CLI and DevEx
+- [Emergent Capabilities](../../platform-framework-exploration/03-emergent-capabilities.md) - Workflow patterns
+
+---
+
+## 📖 Research Reports Catalog (Legacy)
 
 ### 1. Architectural Analysis of Modern Developer Platforms for Polyglot Microservices
 **File**: [01-architectural-analysis-modern-platforms.md](./01-architectural-analysis-modern-platforms.md)
